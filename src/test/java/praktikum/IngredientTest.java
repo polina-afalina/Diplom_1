@@ -33,21 +33,21 @@ public class IngredientTest {
     @Test
     public void testGetType() {
         Ingredient ingredient = new Ingredient(type, name, price);
-        assertEquals("Ошибка: метод getType() вернул неверный тип ингредиента", type, ingredient.getType());
+        assertEquals("Ошибка: метод getType() вернул неверный тип ингредиента.", type, ingredient.getType());
 
     }
 
     @Test
     public void testGetName() {
         Ingredient ingredient = new Ingredient(type, name, price);
-        assertEquals("Ошибка: метод getName() вернул неверное имя ингредиента", name, ingredient.getName());
+        assertEquals("Ошибка: метод getName() вернул неверное имя ингредиента.", name, ingredient.getName());
 
     }
 
     @Test
     public void testGetPrice() {
         Ingredient ingredient = new Ingredient(type, name, price);
-        assertEquals("Ошибка: метод getPrice() вернул неверную цену ингредиента", price, ingredient.getPrice(), 0.001f);
+        assertEquals("Ошибка: метод getPrice() вернул неверную цену ингредиента.", price, ingredient.getPrice(), 0.001f);
 
     }
 }

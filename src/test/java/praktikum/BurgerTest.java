@@ -30,21 +30,21 @@ public class BurgerTest {
     @Test
     public void testSetBuns() {
         burger.setBuns(mockBun);
-        assertEquals("Ошибка: булка из метода setBuns() должно совпадать с переданным мок-объектом mockBun",mockBun, burger.bun);
+        assertEquals("Ошибка: булка из метода setBuns() должно совпадать с переданным мок-объектом mockBun.",mockBun, burger.bun);
     }
 
     @Test
     public void testAddIngredient() {
         burger.addIngredient(mockIngredient1);
-        assertEquals("Ошибка: количество ингредиентов после добавления mockIngredient1 должно быть 1", 1, burger.ingredients.size());
-        assertEquals("Ошибка: добавленный ингредиент должен совпадать с mockIngredient1", mockIngredient1, burger.ingredients.get(0));
+        assertEquals("Ошибка: количество ингредиентов после добавления mockIngredient1 должно быть 1.", 1, burger.ingredients.size());
+        assertEquals("Ошибка: добавленный ингредиент должен совпадать с mockIngredient1.", mockIngredient1, burger.ingredients.get(0));
     }
 
     @Test
     public void testRemoveIngredient() {
         burger.addIngredient(mockIngredient1);
         burger.removeIngredient(0);
-        assertTrue("Ошибка: список ингредиентов должен быть пустым после удаления ингредиента", burger.ingredients.isEmpty());
+        assertTrue("Ошибка: список ингредиентов должен быть пустым после удаления ингредиента.", burger.ingredients.isEmpty());
     }
 
     @Test
@@ -52,8 +52,8 @@ public class BurgerTest {
         burger.addIngredient(mockIngredient1);
         burger.addIngredient(mockIngredient2);
         burger.moveIngredient(0, 1);
-        assertEquals("Ошибка: после перемещения mockIngredient2 должен быть на позиции 0", mockIngredient2, burger.ingredients.get(0));
-        assertEquals("Ошибка: после перемещения mockIngredient1 должен быть на позиции 1", mockIngredient1, burger.ingredients.get(1));
+        assertEquals("Ошибка: после перемещения mockIngredient2 должен быть на позиции 0.", mockIngredient2, burger.ingredients.get(0));
+        assertEquals("Ошибка: после перемещения mockIngredient1 должен быть на позиции 1.", mockIngredient1, burger.ingredients.get(1));
 
     }
 
@@ -69,7 +69,7 @@ public class BurgerTest {
 
         // Цена за две булки (100 * 2) + два ингредиента (50 + 30)
         float expectedPrice = 100 * 2 + 50 + 30;
-        assertEquals("Ошибка: итоговая цена не равна 280 (100 * 2 + 50 + 30)", expectedPrice, burger.getPrice(), 0.001f);
+        assertEquals("Ошибка: итоговая цена не равна 280 (100 * 2 + 50 + 30).", expectedPrice, burger.getPrice(), 0.001f);
 
     }
 
@@ -86,9 +86,9 @@ public class BurgerTest {
 
         String receipt = burger.getReceipt();
 
-        assertTrue("Ошибка: чек не содержит названия булки 'black bun'", receipt.contains("black bun"));
-        assertTrue("Ошибка: чек не содержит корректного описания ингредиента 'sauce hot sauce'", receipt.contains("sauce hot sauce"));
-        assertTrue("Ошибка: чек не содержит итоговой цены 'Price: 300.000000'", receipt.contains("Price: 300.000000"));
+        assertTrue("Ошибка: чек не содержит названия булки \"black bun\".", receipt.contains("black bun"));
+        assertTrue("Ошибка: чек не содержит корректного описания ингредиента \"sauce hot sauce\".", receipt.contains("sauce hot sauce"));
+        assertTrue("Ошибка: чек не содержит итоговой цены \"Price: 300.000000\".", receipt.contains("Price: 300.000000"));
 
     }
 }
