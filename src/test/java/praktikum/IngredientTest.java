@@ -22,7 +22,7 @@ public class IngredientTest {
         this.price = price;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Данные тестового ингредиента: тип {0}, название {1}, цена {2}.")
     public static Collection<Object[]> getData() {
         return Arrays.asList(new Object[][] {
                 { IngredientType.SAUCE, "hot sauce", 100 },
@@ -34,20 +34,17 @@ public class IngredientTest {
     public void testGetType() {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals("Ошибка: метод getType() вернул неверный тип ингредиента.", type, ingredient.getType());
-
     }
 
     @Test
     public void testGetName() {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals("Ошибка: метод getName() вернул неверное имя ингредиента.", name, ingredient.getName());
-
     }
 
     @Test
     public void testGetPrice() {
         Ingredient ingredient = new Ingredient(type, name, price);
         assertEquals("Ошибка: метод getPrice() вернул неверную цену ингредиента.", price, ingredient.getPrice(), 0.001f);
-
     }
 }
