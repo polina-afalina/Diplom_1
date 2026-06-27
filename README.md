@@ -1,10 +1,10 @@
-# Stellar Burgers Unit Testing Project
+# Diplom_1 — Unit Testing for Stellar Burgers
 
 ## Overview
 
-This project was created as part of Yandex Practicum QA automation course and focuses on writing automated unit tests for the core components of the [Stellar Burgers](https://stellarburgers.nomoreparties.site/) web application.
+This project contains unit tests for the core business logic of the *Stellar Burgers* application. It focuses on validating individual components in isolation, ensuring that domain models, calculations, and internal workflows behave as expected.
 
-The goal of the project was to practice unit testing principles, validate application logic, work with test data, and analyze test coverage using Java testing tools.
+The tests are designed to verify correctness at the method and class level without involving external dependencies such as APIs, databases, or UI layers.
 
 ## Tested Components
 
@@ -28,7 +28,7 @@ The test suite includes:
 - Mocking support for isolated component testing
 - Code coverage analysis
 
-## Technologies Used
+## Tech Stack
 
 - **Java 11** — core language for application logic and unit testing  
 - **Maven** — build automation and dependency management  
@@ -50,7 +50,7 @@ java -version
 mvn -version
 ```
 
-## Running Tests
+## How to Run Tests
 
 Clone the repository:
 
@@ -70,7 +70,7 @@ Run tests:
 mvn clean test
 ```
 
-## Generating Test Coverage Report
+## How to Generate Test Coverage Report
 
 Run:
 
