@@ -50,7 +50,7 @@ java -version
 mvn -version
 ```
 
-## How to Run Tests
+## Running Tests
 
 Clone the repository:
 
@@ -70,9 +70,7 @@ Run tests:
 mvn clean test
 ```
 
-## How to Generate Test Coverage Report
-
-Run:
+Generate test coverage report:
 
 ```bash
 mvn clean verify
@@ -83,5 +81,3 @@ After execution, open the generated report:
 ```
 target/site/jacoco/index.html
 ```
-
-The report contains information about executed tests and code coverage.
